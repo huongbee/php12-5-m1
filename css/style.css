@@ -1,0 +1,46 @@
+body{
+	margin: 0;
+	background-color: #f3f3f3
+}
+
+
+p{
+	color: #2468d6;
+	font-family: "Tahoma";
+	text-transform: uppercase;
+	text-decoration: underline
+}
+
+.maudo{
+	color: red
+}
+
+#mautim{
+	color: violet;
+
+}
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.blink{
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-direction: alternate;
+}
+
+.box{
+	height: 250px;
+	width: 250px;
+	color: yellow;
+	background-color: blue;
+	text-align: center;
+	padding: 40px 50px 40px 80px;
+	background-image: url('../image/background-8.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover
+}
