@@ -1,0 +1,63 @@
+body{
+	background-image: url('../image/background-8.jpg');
+	background-size: cover;
+	margin: 0
+}
+.container{
+	width: 1000px;
+	margin: 30px auto;
+	border: 1px solid
+}
+
+.header{
+	background-color: red;
+	height: 100px
+}
+
+.content{
+	height: 500px
+}
+
+.left{
+	height: 200px;
+	background-color: #0fffef;
+	width: 300px;
+	float: left;
+}
+.right{
+	height: 200px; 
+	width: 700px;
+	background-color: blue;
+	float: left;
+}
+.left-2{
+	height: 300px;
+	background-color: violet;
+	width: 600px;
+	float: left
+}
+.right-2{
+	height: 300px;
+	background-color: yellow;
+	width: 400px;
+	float: left
+}
+.footer{
+	height: 100px;
+	background-color: green
+}
+
+
+
+.menu li{
+	list-style-type: none;
+	float: left;
+	padding: 20px 30px;
+	background-color: blue;
+	color: #fff;
+	text-transform: uppercase;
+	border-left: 1px solid #fff
+}
+.menu li:hover{
+	cursor: pointer;
+}
