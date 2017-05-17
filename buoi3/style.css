@@ -49,6 +49,8 @@ body{
 
 
 
+
+
 .menu li{
 	list-style-type: none;
 	float: left;
@@ -61,3 +63,44 @@ body{
 .menu li:hover{
 	cursor: pointer;
 }
+
+.menucon{
+	display: none;
+	position: absolute;
+	margin-left: -60px;
+	z-index: 1
+}
+
+
+.menu li:hover .menucon{
+	display: block;
+}
+
+.menu li .menucon li{
+	float: none;
+	border-left: none;
+	border-bottom: 1px solid #fff;
+	background-color: red;
+
+}
+
+
+/*  .menucon{
+ display:none;
+ position:absolute; 
+ background-color:#63C;
+ list-style-type:none;
+}
+.menucon li{
+ border:1px solid #333;
+ padding:10px 52px;
+ font-size:14px;
+  
+}
+.menu >li:hover .menucon{
+ display:block;
+ top:56px;
+ left:-0px;
+ position:absolute
+}
+ */
