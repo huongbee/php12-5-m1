@@ -1,7 +1,8 @@
 body{
 	background-image: url('../image/background-8.jpg');
 	background-size: cover;
-	margin: 0
+	margin: 0px;
+	padding: 0px
 }
 .container{
 	width: 1000px;
@@ -104,3 +105,26 @@ body{
  position:absolute
 }
  */
+
+
+.hinh1 img{
+	position: relative;
+	top: 100px;
+	left: 100px;
+}
+
+.hinh2 img{
+	position: absolute;
+	top: 150px;
+	left: 150px
+}
+.hinh3 img{
+	position: absolute;
+	top: 200px;
+	left: 200px
+}
+.hinh4 img{
+	position: absolute;
+	top: 250px;
+	left: 250px
+}
