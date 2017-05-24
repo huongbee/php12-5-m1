@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Buoi 5</title>
+</head>
+<script>
+	function tinhtong()
+	{
+		//lấy giá trị 2 số a và b
+		var a=document.getElementById("soa").value;
+		var b=document.getElementById("sob").value;
+		//tính tổng a và b
+		var tong=parseInt(a)+parseInt(b);
+		//gán giá trị mới tính vào ô kết quả
+		var kq=document.getElementById("ketqua");
+		kq.value=tong;
+		//đặt điều kiện lỗi
+		if(a=="")
+		{
+			alert("số a không được bỏ trống ")
+		}
+		if(b=="")
+		{
+			alert("số b không được bỏ trống ")
+		}
+		if(isNaN(a))
+		{
+			alert("số a phải là một số")
+			
+		}if(isNaN(b))
+		{
+			alert("số b phải là một số")
+			
+		}
+		
+	}function tinhhieu()
+	{
+		//lấy giá trị 2 số a và b
+		var a=document.getElementById("soa").value;
+		var b=document.getElementById("sob").value;
+		//tính tổng a và b
+		var tong=parseInt(a)-parseInt(b);
+		//gán giá trị mới tính vào ô kết quả
+		var kq=document.getElementById("ketqua");
+		kq.value=tong;
+		//đặt điều kiện lỗi
+		if(a=="")
+		{
+			alert("số a không được bỏ trống ")
+		}
+		if(b=="")
+		{
+			alert("số b không được bỏ trống ")
+		}
+		if(isNaN(a))
+		{
+			alert("số a phải là một số")
+			
+		}
+		if(isNaN(b))
+		{
+			alert("số b phải là một số")
+			
+		}
+		
+	}
+	function tinhnhan()
+	{
+		//lấy giá trị 2 số a và b
+		var a=document.getElementById("soa").value;
+		var b=document.getElementById("sob").value;
+		//tính tổng a và b
+		var tong=parseInt(a)*parseInt(b);
+		//gán giá trị mới tính vào ô kết quả
+		var kq=document.getElementById("ketqua");
+		kq.value=tong;
+		//đặt điều kiện lỗi
+		if(a=="")
+		{
+			alert("số a không được bỏ trống ")
+		}
+		if(b=="")
+		{
+			alert("số b không được bỏ trống ")
+		}
+		if(isNaN(a))
+		{
+			alert("số a phải là một số")
+			
+		}
+		if(isNaN(b))
+		{
+			alert("số b phải là một số")
+			
+		}
+		
+	}
+	function tinhchia()
+	{
+		//lấy giá trị 2 số a và b
+		var a=document.getElementById("soa").value;
+		var b=document.getElementById("sob").value;
+		//tính tổng a và b
+		var tong=parseInt(a)/parseInt(b);
+		//gán giá trị mới tính vào ô kết quả
+		var kq=document.getElementById("ketqua");
+		kq.value=tong;
+		//đặt điều kiện lỗi
+		if(a=="")
+		{
+			alert("số a không được bỏ trống ")
+		}
+		if(b=="")
+		{
+			alert("số b không được bỏ trống ")
+		}
+		if(isNaN(a))
+		{
+			alert("số a phải là một số")
+			
+		}
+		if(isNaN(b))
+		{
+			alert("số b phải là một số")
+			
+		}
+		
+	}
+</script>
+<body>
+	<input id="soa"  placeholder="Nhap so a"/><br />
+    <input id="sob"  placeholder="Nhap so b"/><br />
+    <button onclick="tinhtong()" value="tinhtong">Cộng</button>
+    <button onclick="tinhhieu()" value="tinhhieu">Trừ</button>
+    <button onclick="tinhnhan()" value="tinhnhan">Nhân</button>
+    <button onclick="tinhchia()" value="tinhchia">Chia</button><br />
+    <input id="ketqua" />
+</body>
+
+</html>

@@ -2,9 +2,12 @@ body{
 	margin: 0px;
 	background-color: #f3f3f3
 }
+span{
+	width: 90%
+}
 .container{
 	margin: auto;
-	width: 1230px;
+	width: 100%
 }
 
 .sanpham{
@@ -38,3 +41,4 @@ body{
 	color: red;
 	font-family: "Tahoma"
 }
+

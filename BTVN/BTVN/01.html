@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bài Tập Về Tính Toán</title>
+<link rel="stylesheet" type="text/css" href="css/01.css"/>
+
+<script type="text/javascript">
+	window.onload = function(){
+		var number1 = "";
+		var number2 = "";
+		
+		/*===== PHÉP CỘNG ======*/
+		var phepCong	 	= document.getElementById("phep-cong");
+		phepCong.onclick    = function(){
+			number1 	 = document.getElementById("number1").value;
+			number2 	 = document.getElementById("number2").value;
+			if(number1 == "" || number2 == ""){
+				alert("Ô nhập dữ liệu không được để trống");
+			}else{
+				number1	 = parseInt(number1);
+				number2 	 = parseInt(number2);
+				if(isNaN(number1)){
+					alert("Ô nhập dữ liệu phải là một số");
+					document.getElementById("number1").value = "";
+				}else if(isNaN(number2)){
+					alert("Ô nhập dữ liệu phải là một số");
+					document.getElementById("number2").value = "";
+
+				}else{
+					var result  = number1 + number2;
+					var kq 	  = document.getElementById("kq");
+					kq.value = result;	
+				}
+			}
+			
+		}
+		
+		/*===== PHÉP TRỪ ======*/
+		var phepTru	 	= document.getElementById("phep-tru");
+		phepTru.onclick    = function(){
+			number1 	    = document.getElementById("number1").value;
+			number2 	    = document.getElementById("number2").value;
+			if(number1 == "" || number2 == ""){
+				alert("Ô nhập dữ liệu không được để trống");
+			}else{
+				number1	 = parseInt(number1);
+				number2 	 = parseInt(number2);
+				if(isNaN(number1)){
+					alert("Ô nhập dữ liệu phải là một con số");
+					document.getElementById("number1").value = "";
+				}else if(isNaN(number2)){
+					alert("Ô nhập dữ liệu phải là một con số");
+					document.getElementById("number2").value = "";
+
+				}else{
+					var result  = number1 - number2;
+					var kq 	  = document.getElementById("kq");
+					kq.value = result;	
+				}
+			}
+			
+		}
+		
+		/*===== PHÉP NHÂN ======*/
+		var phepNhan	 	= document.getElementById("phep-nhan");
+		phepNhan.onclick    = function(){
+			number1 	     = document.getElementById("number1").value;
+			number2 	     = document.getElementById("number2").value;
+			if(number1 == "" || number2 == ""){
+				alert("Ô nhập dữ liệu không được để trống");
+			}else{
+				number1	 = parseInt(number1);
+				number2 	 = parseInt(number2);
+				if(isNaN(number1)){
+					alert("Ô nhập dữ liệu phải là một số");
+					document.getElementById("number1").value = "";
+				}else if(isNaN(number2)){
+					alert("Ô nhập dữ liệu phải là một số");
+					document.getElementById("number2").value = "";
+
+				}else{
+					var result  = number1 * number2;
+					var kq 	  = document.getElementById("kq");
+					kq.value = result;	
+				}
+			}
+			
+		}
+		
+		/*===== PHÉP CHIA ======*/
+		var phepChia	 	= document.getElementById("phep-chia");
+		phepChia.onclick    = function(){
+			number1 	     = document.getElementById("number1").value;
+			number2 	     = document.getElementById("number2").value;
+			if(number1 == "" || number2 == ""){
+				alert("Ô nhập dữ liệu không được để trống");
+			}else{
+				number1	 = parseInt(number1);
+				number2 	 = parseInt(number2);
+				if(isNaN(number1)){
+					alert("Ô nhập dữ liệu phải là một số");
+					document.getElementById("number1").value = "";
+				}else if(isNaN(number2)){
+					alert("Ô nhập dữ liệu phải là một số");
+					document.getElementById("number2").value = "";
+
+				}else if(number2 == 0){
+					alert("Số bị chia không được bằng 0");
+					document.getElementById("number2").value = "";
+
+				}else{
+					var result  = number1 / number2;
+					var kq 	  = document.getElementById("kq");
+					kq.value = result;	
+				}
+			}
+			
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div class="content">
+    	<h1>Mô phỏng máy tính điện tử đơn giản</h1>
+        <form name="appForm" method="post" action="#">
+        	<div class="row">
+            	<span>Số Thứ Nhất</span>
+                <input type="text" name="number1" id="number1" placeholder="Nhập vào số thứ nhất" />
+            </div>
+            <div class="row">
+            	<span>Số Thứ Hai</span>
+                <input type="text" name="number2" id="number2" placeholder="Nhập vào số thứ hai" />
+            </div>
+            <div class="row">
+            	<span>Phép Tính</span>
+                <input type="button" id="phep-cong" value="+" />
+                <input type="button" id="phep-tru" value="-" />
+                <input type="button" id="phep-nhan" value="x" />
+                <input type="button" id="phep-chia" value="/" />
+            </div>
+            <div class="row">
+                <input type="text" id="kq" />
+            </div>
+            
+        </form>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Js Tinh</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+  -->
+</head>
+<body>
+<div class="container">
+<p class="well text-center"> Bảng tính 2 số </p>
+<div class="form-group">
+  <label for="usr">Số A:</label>
+  <input type="text" class="form-control" id="so_a">
+</div>
+<div class="form-group">
+  <label for="pwd">Số B</label>
+  <input type="text" class="form-control" id="so_b">
+</div>
+<div class="form-group">
+<form id="rate">
+<label class="radio-inline"><input type="radio" name="optradio" id="PhepTinh" value="+">+ ( Cộng )</label>
+<label class="radio-inline"><input type="radio" name="optradio" id="PhepTinh" value="-">- ( Trừ )</label>
+<label class="radio-inline"><input type="radio" name="optradio" id="PhepTinh" value="*">x ( Nhân )</label>
+<label class="radio-inline"><input type="radio" name="optradio" id="PhepTinh" value="/">/ ( Chia )</label>
+</form>
+</div>
+<button type="button" class="btn btn-lg" onclick="count()">Submit</button>
+<div class="form-group">
+  <label for="pwd">Kết Quả</label>
+  <input type="text" class="form-control" id="kq" readonly="">
+</div>
+</div>
+<script  type="text/javascript">
+	function count(){
+		var a = document.getElementById('so_a')
+		var b = document.getElementById('so_b')
+			a= parseInt(a.value)
+			b= parseInt(b.value)
+
+			// Kiểm tra phải là số không */
+			if (isNaN(a) || isNaN(b)) {
+				alert ('Vui lòng nhập số')
+			} 
+			else {
+				var radios = document.getElementsByName('optradio');
+				 length = radios.length; // đêm bao nhiêu tag chọn //
+
+				for (var i = 0; i < length; i++) {
+			    	if (radios[i].checked) {
+				        // Kiểm tra radio nào được bấm
+				        var pheptinh=radios[i].value;			         
+				        // Chọn phép tính = value nút
+				        break;
+				        // Thoát vòng lặp
+			    	}
+				}		
+		
+				if (pheptinh=='+') {
+					var result=a+b
+				}
+				else if (pheptinh=='-') {
+					var result=a-b
+				}
+				else if (pheptinh=='*') {
+					var result=a*b
+				}
+				else if (pheptinh=='/') {
+					if (b ==0){
+						var result='Mẫu số phải khác 0'	
+					} else
+						var result=a/b
+				}
+				else {					
+					var result='Vui lòng chọn phép tính'
+				}
+		
+			document.getElementById('kq').value=result;
+			}
+
+	}	
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Buôi 5</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	Số a: <input id="so_a" placeholder="Nhập số a">
+	<br><br>
+	Số b: <input id="so_b"  placeholder="Nhập số b">
+	<br><br>
+	Phép tính: <input id="pheptinh"  placeholder="Nhập phép tính">
+	<br><br>
+	kết quả: <input id="kq"  placeholder="kết quả" readonly>
+	<br><br>
+	<button onclick="tinhToan()"> Tính</button>
+</body>
+	<script>
+		//document.write('Hello world !')
+		
+		/*var so_a = document.getElementById('so_a').value;
+
+
+		console.log(so_a);*/
+
+
+		function tinhToan(){
+			var soa = document.getElementById('so_a');
+			var sob = document.getElementById('so_b');
+			var pheptinh = document.getElementById('pheptinh');
+			var ketqua = document.getElementById('kq');
+
+			if(sob.value == ''){
+				alert('Số b không rỗng!')
+				sob.focus()
+				return false
+			}
+			if(sob.value == 0){
+				alert('Số b phải khác 0!')
+				sob.focus()
+				return false
+			}
+			if(soa.value == 0){
+				alert('Số a phải khác 0!')
+				soa.focus()
+				return false
+			}
+
+			if(isNaN(soa.value)){
+				alert('a không phải số')
+				soa.focus()
+				return false
+			}
+			if(isNaN(sob.value)){
+				alert('b không phải số')
+				sob.focus()
+				return false
+			}
+
+
+			a = parseInt(soa.value)
+
+			b = parseInt(sob.value)
+
+			var kq = 0
+			if(pheptinh.value == '+'){
+				kq = a+b 
+			}
+			else if(pheptinh.value == '-'){
+				kq = a-b 
+			}
+			else if(pheptinh.value == '*'){
+				kq = a*b 
+			}
+			else if(pheptinh.value == '/'){
+				kq = a/b 
+			}
+			else{
+				kq = "Phép tính ( +, -, *, /)";
+				pheptinh.focus();
+				ketqua.value = kq
+
+				return false;
+			}
+
+			ketqua.value = kq
+
+			
+		}
+
+	</script>
+</html>

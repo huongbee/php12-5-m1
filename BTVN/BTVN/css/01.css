@@ -1,0 +1,43 @@
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+	}
+.content{
+	width:600px;
+	margin:20px auto;
+	padding:10px;
+	border:1px solid #999;
+	background-color:#EBEBEB;
+	}
+.content h1{
+	text-align:center;
+	color:#F00;
+	}
+.content div.row{
+	margin-top:10px;
+	}
+.content div.row span{
+	display:inline-block;
+	width:260px;
+	text-align:right;
+	}
+.content div.row input[type=text]{
+	padding:3px 5px;
+	}
+.content div.row input[type=button]{
+	width:38.5px;
+	margin-right:5px;
+	padding:3px 5px;
+	}
+.content div.row input#kq{
+	margin-left:263px;
+	font-weight:bold;
+	color:#F00;
+}
+
+
+
+
+.
+
