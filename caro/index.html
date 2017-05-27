@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cờ caro</title>
+	<link rel="stylesheet" href="">
+
+
+</head>
+<body>
+	
+	
+	<script type="text/javascript" src="../buoi6/js/jquery-3.2.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			for($i=0;$i<324;$i++){
+				$('.banco').append('<div class="oco"></div>')
+			}
+			$('.banco').css({"width":"400px"})
+			$('.oco').css({"width": "20px","height": "20px","background-color": "#fff2fa","border": "1px solid #fc37b0","float": "left","cursor":"pointer"})
+
+			$('.oco').mouseover(function(){
+				$(this).css("background-color", "#f8ffc1")
+			})
+			$('.oco').mouseout(function(){
+				$(this).css("background-color", "#fff2fa")
+			})
+			
+		})
+		
+	</script>
+
+	<div class="banco">
+		
+	</div>
+
+
+</body>
+</html>

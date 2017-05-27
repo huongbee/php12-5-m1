@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mua hàng</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	Đơn giá:<div class="dongia">15</div>
+	<input class="tru" type="button" value="-">
+	<input class="soluong" type="text" value="1" style="width: 50px">
+	<input class="cong" type="button" value="+">
+
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		
+	$(document).ready(function(){
+
+		var dongia = $('.dongia').text(); //lấy giá trị
+			//console.log(dongia)
+		$('.tru').click(function(){
+			var soluong = $('.soluong').val(); //get (lấy) giá trị
+			if(soluong>1){
+				$('.soluong').val(soluong-1) //set (gán) giá trị
+				$('.dongia').text(dongia*(parseInt(soluong)-1))
+			}
+		})
+
+
+		// $('.cong').click(function(){
+		// 	var soluong = $('.soluong').val(); //get (lấy) giá trị
+			
+		// 	if(soluong<20){
+		// 		$('.soluong').val(parseInt(soluong)+1) //set (gán) giá trị
+		// 		$('.dongia').text(dongia*(parseInt(soluong)+1))
+		// 	}
+		// })
+
+		$('.cong').on('mouseout',function(){
+			var soluong = $('.soluong').val(); //get (lấy) giá trị
+			
+			if(soluong<20){
+				$('.soluong').val(parseInt(soluong)+1) //set (gán) giá trị
+				$('.dongia').text(dongia*(parseInt(soluong)+1))
+			}
+		})
+	})
+
+	</script>
+</body>
+</html>
