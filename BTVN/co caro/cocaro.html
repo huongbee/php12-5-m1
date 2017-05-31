@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cocaro</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main"></div>
+	<div class=baoloi style="width: 150px ;height:50px; text-align: center; position: fixed; left: 45%;top: 42%;background:plum;display: none"><p>Ô đã Có Quân Cờ!!!</p></div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+		for($i=0;$i<936;$i++){
+				$('.main').append('<div class="sq"></div>')
+			}
+		
+		$(document).ready(function(){
+			$('.main').css({"width":"800px","margin":"auto"});
+			$('.sq').css({"width":"20px","height":"20px","background-color":"#ddd","border":"1px solid #888888","float":"left","text-align":"center"});
+
+			var enter = 0;
+			$('.sq').click(function(){
+				if($(this).text()==""){
+					enter++;
+						if(enter%2==1)
+							$(this).text("X");
+						else
+							$(this).text("O");
+						
+				}else{
+					$('.baoloi').show(1000);
+					$('.baoloi').hide(6000);
+
+				}
+				
+		    });
+
+			$('.sq').mouseover(function(){
+				$(this).css({"background-color":"green"})
+			});
+			$('.sq').mouseout(function(){
+				$(this).css({"background-color":"#ddd"})
+			});
+			
+		    
+		});    
+	</script>
+</body>
+</html>

@@ -26,6 +26,28 @@
 			$('.oco').mouseout(function(){
 				$(this).css("background-color", "#fff2fa")
 			})
+
+
+			var dem=0;
+
+			$('.oco').click(function(){
+				var a = $(this).text()
+				if(a==''){
+					if(dem%2==0){
+						$(this).text('X')
+					}
+					else{
+						$(this).text('O')
+					}
+					dem = dem+1
+				}
+				else{
+					alert("Can't check this again!")
+				}
+
+				
+			})
+
 			
 		})
 		
